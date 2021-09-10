@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Default Required Resources -->
+		<meta charset="utf-8" />
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title="Blog RSS"
+			href="//mehvix.com/posts/rss.xml"
+		/>
+		<link
+			href="//mehvix.com/static/css/style.css"
+			type="text/css"
+			rel="stylesheet"
+		/>
+		<script src="//mehvix.com/static/js/include.js"></script>
+
+		<title>Mehvix | Berkeley Badge 2.0</title>
+		<style>
+			:root {
+				--outside-bg-color: #095092;
+			}
+
+			button {
+				font-size: 16px;
+				font-family: inherit;
+				padding: 0.4ch 0.8ch;
+				margin: 0.4em 0.2em;
+				border-radius: 5px;
+				box-shadow: 4px 4px black;
+				/* background-color: var(--code-bg-color);
+                color: var(--inside-bg-color); */
+			}
+
+			button:hover {
+				background-color: rgba(221, 221, 221, 0.712);
+				box-shadow: 4.5px 4.5px black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="nav">
+				<a href="/index.html">~</a>/<a href="" class="inverse-bg"
+					>Berkeley Pass</a
+				>
+			</div>
+
+			<article>
+				<div>
+					<div
+						style="
+							align-items: center;
+							text-align: center;
+							padding: 2ch;
+						"
+					>
+						<input
+							class="input"
+							type="text"
+							name="name"
+							id="name"
+							placeholder="First + Last Name"
+							style="width: 30ch"
+						/>
+
+						<button onclick="go()">Go</button>
+						<script>
+							function go() {
+								let name = encodeURI(
+									document.getElementById("name").value
+								);
+
+								if (name) {
+									console.log(name);
+									window.location.replace(
+										`${window.location.href}pass.html?name=${name}`
+									);
+								}
+							}
+						</script>
+					</div>
+				</div>
+			</article>
+
+			<div id="footer">
+				<table id="footerTable">
+					<tr>
+						<td>$BTC</td>
+						<td>
+							<a href="btc:15adHcuUPLHzVmUqKqgeLfLzvtfD5r7WJ1">
+								15adHcuUPLHzVmUqKqgeLfLzvtfD5r7WJ1
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>$ETH</td>
+						<td>
+							<a
+								href="eth:0xeeC384Cdef3aD975EdF1D2f6C1dC9a4b1fEEBF74"
+								>0xeeC384Cdef3aD975EdF1D2f6C1dC9a4b1fEEBF74
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>$XMR</td>
+						<td class="cryptoaddy" style="max-width: inherit">
+							<a
+								href="xmr:45MaKMYnWBnNWS4rtbrMp8C6wL1B1mguW6AjmJBGqLJkCzVUMuXwamzRfrmiwLw1WrbUptNjY1DoL4Yu4fXqTDAcDEWpuTZ"
+								class="cryptoaddy"
+							>
+								45MaKMYnWBnNWS4rtbrMp8C6wL1B1mguW6AjmJBGqLJkCzVUMuXwamzRfrmiwLw1WrbUptNjY1DoL4Yu4fXqTDAcDEWpuTZ
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td id="footerDateYear">2021</td>
+						<td>Max Vogel</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
