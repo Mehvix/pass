@@ -28,6 +28,7 @@
 		<style class="kgoui_page_font_size"></style>
 	</head>
 	<body
+		onclick="gofull()"
 		id="kgoui"
 		class="
 			kgoui_object kgoui_page
@@ -758,9 +759,8 @@
 		<script>
 			/* Get the documentElement (<html>) to display the page in fullscreen */
 			var elem = document.documentElement;
-
-			/* View in fullscreen */
-			function openFullscreen() {
+			function gofull() {
+				/* View in fullscreen */
 				if (elem.requestFullscreen) {
 					elem.requestFullscreen();
 				} else if (elem.webkitRequestFullscreen) {
