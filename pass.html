@@ -28,7 +28,6 @@
 		<style class="kgoui_page_font_size"></style>
 	</head>
 	<body
-		onclick="gofull()"
 		id="kgoui"
 		class="
 			kgoui_object kgoui_page
@@ -757,20 +756,21 @@
 			});
 		</script> -->
 		<script>
-			/* Get the documentElement (<html>) to display the page in fullscreen */
-			var elem = document.documentElement;
-			function gofull() {
-				/* View in fullscreen */
-				if (elem.requestFullscreen) {
-					elem.requestFullscreen();
-				} else if (elem.webkitRequestFullscreen) {
-					/* Safari */
-					elem.webkitRequestFullscreen();
-				} else if (elem.msRequestFullscreen) {
-					/* IE11 */
-					elem.msRequestFullscreen();
-				}
+			if (document.documentElement.requestFullScreen) {
+				document.documentElement.requestFullScreen();
+			} else if (document.documentElement.mozRequestFullScreen) {
+				document.documentElement.mozRequestFullScreen();
+			} else if (document.documentElement.webkitRequestFullScreen) {
+				document.documentElement.webkitRequestFullScreen();
 			}
+			addEventListener("click", function () {
+				var el = document.documentElement,
+					rfs =
+						el.requestFullScreen ||
+						el.webkitRequestFullScreen ||
+						el.mozRequestFullScreen;
+				rfs.call(el);
+			});
 		</script>
 	</body>
 </html>

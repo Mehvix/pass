@@ -2,6 +2,11 @@
 <html lang="en">
 	<head>
 		<!-- Default Required Resources -->
+		<meta
+			name="viewport"
+			content="width=569,
+        maximum-scale=1"
+		/>
 		<meta charset="utf-8" />
 		<link
 			rel="alternate"
@@ -18,7 +23,7 @@
 
 		<link
 			rel="icon"
-			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💉</text></svg>"
+			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📒</text></svg>"
 		/>
 
 		<title>Mehvix | Berkeley Badge 2.0</title>
@@ -71,7 +76,7 @@
 							style="width: 30ch"
 						/>
 
-						<button onclick="go()">Go</button>
+						<button onclick="go()">Open Pass</button>
 						<script>
 							function go() {
 								let name = encodeURI(
@@ -80,7 +85,7 @@
 
 								if (name) {
 									console.log(name);
-									window.location.replace(
+									window.location.assign(
 										`${window.location.href}pass.html?name=${name}`
 									);
 								}
@@ -99,6 +104,27 @@
 						</script>
 					</div>
 				</div>
+
+				---<br />
+				<h1>Why?</h1>
+				As of 9/10/2021, UC Berkeley requires students to fill out a
+				daily screener through their app to access dinning halls / RSF /
+				etc. The app is slow, buggy, and requires you to sign-in +
+				authenticate with duo mobile every single time. On top of that,
+				the survey itself is pointless -- it asks "<i
+					>hey, do you have COVID symptoms? do you have the vax?</i
+				>" and a few other pointless questions no one reads anyways.
+				<br />
+				<br />
+				This site should save you some time by skipping the app. It
+				shows the exact same html/css from the app (yoink'd by using
+				<code>brave://inspect/#devices</code> see the webview of the
+				app).
+				<strong
+					>After you enter your full name, tap anywhere on the pass
+					page to enter full screen</strong
+				>
+				(hiding the browser GUI).
 			</article>
 
 			<div id="footer">
