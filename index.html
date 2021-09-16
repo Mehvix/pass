@@ -86,7 +86,7 @@
 								if (name) {
 									console.log(name);
 									window.location.assign(
-										`${window.location.href}pass.html?name=${name}`
+										`${window.location.origin}/pass.html?name=${name}`
 									);
 								}
 							}
@@ -108,7 +108,7 @@
 				---<br />
 				<h1>Why?</h1>
 				As of 9/10/2021, UC Berkeley requires students to fill out a
-				daily screener through their app to access dinning halls / RSF /
+				daily screener through their app to access dining halls / RSF /
 				etc. The app is slow, buggy, and requires you to sign-in +
 				authenticate with duo mobile every single time. On top of that,
 				the survey itself is pointless -- it asks "<i
@@ -127,42 +127,28 @@
 				(hiding the browser GUI).
 			</article>
 
-			<div id="footer">
-				<table id="footerTable">
-					<tr>
-						<td>$BTC</td>
-						<td>
-							<a href="btc:15adHcuUPLHzVmUqKqgeLfLzvtfD5r7WJ1">
-								15adHcuUPLHzVmUqKqgeLfLzvtfD5r7WJ1
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>$ETH</td>
-						<td>
-							<a
-								href="eth:0xeeC384Cdef3aD975EdF1D2f6C1dC9a4b1fEEBF74"
-								>0xeeC384Cdef3aD975EdF1D2f6C1dC9a4b1fEEBF74
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td>$XMR</td>
-						<td class="cryptoaddy" style="max-width: inherit">
-							<a
-								href="xmr:45MaKMYnWBnNWS4rtbrMp8C6wL1B1mguW6AjmJBGqLJkCzVUMuXwamzRfrmiwLw1WrbUptNjY1DoL4Yu4fXqTDAcDEWpuTZ"
-								class="cryptoaddy"
-							>
-								45MaKMYnWBnNWS4rtbrMp8C6wL1B1mguW6AjmJBGqLJkCzVUMuXwamzRfrmiwLw1WrbUptNjY1DoL4Yu4fXqTDAcDEWpuTZ
-							</a>
-						</td>
-					</tr>
-					<tr>
-						<td id="footerDateYear">2021</td>
-						<td>Max Vogel</td>
-					</tr>
-				</table>
-			</div>
+			
+            <div id="footer">
+                <table id="footerTable">
+                    <tr>
+                        <td>$BTC</td>
+                        <td>15adHcuUPLHzVmUqKqgeLfLzvtfD5r7WJ1</td>
+                    </tr>
+                    <tr>
+                        <td>$XMR</td>
+                        <td>45MaKMYnWBnNWS4rtbrMp8C6wL1B1mguW6AjmJBGqLJkCzVUMuXwamzRfrmiwLw1WrbUptNjY1DoL4Yu4fXqTDAcDEWpuTZ</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>$ETH</td>
+                        <td>0xeeC384Cdef3aD975EdF1D2f6C1dC9a4b1fEEBF74</td>
+                    </tr>
+                    <tr>
+                        <td id="footerDateYear">2021</td>
+                        <td>Max Vogel</td>
+                    </tr>
+                </table>
+            </div>
 		</div>
 	</body>
 </html>
