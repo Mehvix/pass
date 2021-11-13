@@ -1,133 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Default Required Resources -->
-		<meta
-			name="viewport"
-			content="width=569,
+    <head>
+        <!-- Default Required Resources -->
+        <meta
+            name="viewport"
+            content="width=569,
         maximum-scale=1"
-		/>
-		<meta charset="utf-8" />
-		<link
-			rel="alternate"
-			type="application/rss+xml"
-			title="Blog RSS"
-			href="//mehvix.com/posts/rss.xml"
-		/>
-		<link
-			href="//mehvix.com/static/css/style.css"
-			type="text/css"
-			rel="stylesheet"
-		/>
-		<script src="//mehvix.com/static/js/include.js"></script>
+        />
+        <meta charset="utf-8" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Blog RSS"
+            href="//mehvix.com/posts/rss.xml"
+        />
+        <link
+            href="//mehvix.com/static/css/style.css"
+            type="text/css"
+            rel="stylesheet"
+        />
+        <script src="//mehvix.com/static/js/include.js"></script>
 
-		<link
-			rel="icon"
-			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📒</text></svg>"
-		/>
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📒</text></svg>"
+        />
 
-		<title>Mehvix | Berkeley Badge 2.0</title>
-		<style>
-			:root {
-				--outside-bg-color: #095092;
-			}
+        <title>Mehvix | Berkeley Badge 2.0</title>
+        <style>
+            :root {
+                --outside-bg-color: #095092;
+            }
 
-			button {
-				font-size: 16px;
-				font-family: inherit;
-				padding: 0.4ch 0.8ch;
-				margin: 0.4em 0.2em;
-				border-radius: 5px;
-				box-shadow: 4px 4px black;
-				/* background-color: var(--code-bg-color);
+            button {
+                font-size: 16px;
+                font-family: inherit;
+                padding: 0.4ch 0.8ch;
+                margin: 0.4em 0.2em;
+                border-radius: 5px;
+                box-shadow: 4px 4px black;
+                /* background-color: var(--code-bg-color);
                 color: var(--inside-bg-color); */
-			}
+            }
 
-			button:hover {
-				background-color: rgba(221, 221, 221, 0.712);
-				box-shadow: 4.5px 4.5px black;
-			}
-		</style>
-	</head>
+            button:hover {
+                background-color: rgba(221, 221, 221, 0.712);
+                box-shadow: 4.5px 4.5px black;
+            }
+        </style>
+    </head>
 
-	<body>
-		<div class="box">
-			<div class="nav">
-				<a href="https://mehvix.com">~</a>/<a href="" class="inverse-bg"
-					>Berkeley Pass</a
-				>
-			</div>
+    <body>
+        <div class="box">
+            <div class="nav">
+                <a href="https://mehvix.com">~</a>/<a href="" class="inverse-bg"
+                    >Berkeley Pass</a
+                >
+            </div>
 
-			<article>
-				<div>
-					<div
-						style="
-							align-items: center;
-							text-align: center;
-							padding: 2ch;
-						"
-					>
-						<input
-							class="input"
-							type="text"
-							name="name"
-							id="name"
-							placeholder="First + Last Name"
-							style="width: 30ch"
-						/>
+            <article>
+                <div>
+                    <div
+                        style="
+                            align-items: center;
+                            text-align: center;
+                            padding: 2ch;
+                        "
+                    >
+                        <input
+                            class="input"
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="First + Last Name"
+                            style="width: 30ch"
+                        />
 
-						<button onclick="go()">Open Pass</button>
-						<script>
-							function go() {
-								let name = encodeURI(
-									document.getElementById("name").value
-								);
+                        <button onclick="go()">Open Pass</button>
+                        <script>
+                            function go() {
+                                let name = encodeURI(
+                                    document.getElementById("name").value
+                                );
 
-								if (name) {
-									console.log(name);
-									window.location.assign(
-										`${window.location.origin}/pass.html?name=${name}`
-									);
-								}
-							}
+                                if (name) {
+                                    console.log(name);
+                                    window.location.assign(
+                                        `${window.location.origin}/pass.html?name=${name}`
+                                    );
+                                }
+                            }
 
-							document.addEventListener(
-								"keypress",
-								function (e) {
-									if (e.keyCode === 13) {
-										//enter
-										go();
-									}
-								},
-								false
-							);
-						</script>
-					</div>
-				</div>
+                            document.addEventListener(
+                                "keypress",
+                                function (e) {
+                                    if (e.keyCode === 13) {
+                                        //enter
+                                        go();
+                                    }
+                                },
+                                false
+                            );
+                        </script>
+                    </div>
+                </div>
 
-				---<br />
-				<h1>Why?</h1>
-				As of 9/10/2021, UC Berkeley requires students to fill out a
-				daily screener through their app to access dining halls / RSF /
-				etc. The app is slow, buggy, and requires you to sign-in +
-				authenticate with duo mobile every single time. On top of that,
-				the survey itself is pointless -- it asks "<i
-					>hey, do you have COVID symptoms? do you have the vax?</i
-				>" and a few other pointless questions no one reads anyways.
-				<br />
-				<br />
-				This site should save you some time by skipping the app. It
-				shows the exact same html/css from the app (yoink'd by using
-				<code>brave://inspect/#devices</code> see the webview of the
-				app).
-				<strong
-					>After you enter your full name, tap anywhere on the pass
-					page to enter full screen</strong
-				>
-				(hiding the browser GUI).
-			</article>
+                <h1>Usage</h1>
+                <p>
+                    After you press "Open Pass", tap anywhere on the page to
+                    enter full screen (hiding the browser GUI). This will not
+                    work in Safari, but works in Chrome & FF.
+                </p>
+                <p>
+                    By using this site you agree that I'm not liable for
+                    anything dumb you do with it!
+                </p>
 
-			
+                <h1>Why?</h1>
+                <p>
+                    UC Berkeley requires students to fill out a daily screener
+                    through an app to access dining halls / RSF / etc. This app
+                    is slow, buggy, and requires you to sign-in + authenticate
+                    with duo mobile every. single. time. On top of that, the
+                    survey itself is useless, asking essentially
+                    <i
+                        >"hey, for the nth time, do you have the vax? also you
+                        don't have COVID symptoms right?"</i
+                    >.
+                </p>
+                <p>
+                    I'm not an antivaxxer, just someone who doesn't want to
+                    spend 5-10 minutes each day using some buggy, pointless app
+                    so that I can be <i>allowed</i> to get food or workout.
+                </p>
+
+                <h1>How?</h1>
+                <p>
+                    I yoink'd the HTML/CSS of the badge page by going to
+                    <code>about://inspect/#devices</code> in Brave. Peep the
+                    code on
+                    <a
+                        href="https://github.com/mehvix/pass"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >Github</a
+                    >.
+                </p>
+            </article>
+
             <div id="footer">
                 <table id="footerTable">
                     <tr>
@@ -136,7 +156,8 @@
                     </tr>
                     <tr>
                         <td>$XMR</td>
-                        <td>45MaKMYnWBnNWS4rtbrMp8C6wL1B1mguW6AjmJBGqLJkCzVUMuXwamzRfrmiwLw1WrbUptNjY1DoL4Yu4fXqTDAcDEWpuTZ</a>
+                        <td>
+                            45MaKMYnWBnNWS4rtbrMp8C6wL1B1mguW6AjmJBGqLJkCzVUMuXwamzRfrmiwLw1WrbUptNjY1DoL4Yu4fXqTDAcDEWpuTZ
                         </td>
                     </tr>
                     <tr>
@@ -149,6 +170,6 @@
                     </tr>
                 </table>
             </div>
-		</div>
-	</body>
+        </div>
+    </body>
 </html>
