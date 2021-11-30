@@ -40,6 +40,7 @@ video {
 }
 body {
     line-height: 1em;
+    background-color: #0f335f;
 }
 q {
     quotes: none;
@@ -260,9 +261,6 @@ html {
 .kgo_full_screen_image_wrapper .kgo_full_screen_image img {
     max-width: 100%;
     max-height: 100%;
-}
-body {
-    background-color: #fff;
 }
 .kgo_no_auto_refresh .kgoui_auto_refresh {
     display: none;
@@ -983,6 +981,7 @@ body {
 }
 .kgoui_page {
     background-color: #f4f4f4;
+    height: 100vh;
 }
 .kgoui_page .kgoui_page_wrapper .kgoui_page_backtotop,
 .kgoui_page .kgoui_page_wrapper .kgoui_page_backtotop:visited {
